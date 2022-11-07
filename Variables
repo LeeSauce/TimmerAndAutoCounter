@@ -1,0 +1,5 @@
+global.isTimmer = [false,false,false];
+frameValue = 0;
+timer = 0;
+
+global.autoUpgrade = [false,false,false,false,false,false];
