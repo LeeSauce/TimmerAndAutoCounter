@@ -1,0 +1,98 @@
+//timmer checker
+if(global.autoUpgrade[0])
+{
+	myTimerMethod(0);
+}	
+else if(global.isTimmer[0])
+{
+	myTimerMethod(1);
+}
+else if(global.isTimmer[1])
+{
+	myTimerMethod(2);
+}
+else if(global.isTimmer[2])
+{
+	myTimerMethod(3);
+}
+
+
+
+
+
+
+//timer method
+	function myTimerMethod(timeUpgrade){
+	
+	switch(timeUpgrade)
+	{
+		case 0:
+			frameValue = 600;
+			myCounter();
+			break;
+			
+		case 1:
+			frameValue = 300;
+			myCounter();
+			break;
+			
+		case 2:
+			frameValue = 180;
+			myCounter();	
+			break;
+			
+		case 3:
+			frameValue = 60;
+			myCounter();
+			break;
+	}
+	
+	}
+
+
+
+//method for auto clicking
+// upgrades for values orginized in arrays
+function myCounter ()
+{
+	if (timer > 0) 
+			{
+				timer --; 
+			}
+			else if (timer == 0) && (global.autoUpgrade[0])
+			{
+				global.puddingSlaps += 3;
+				global.money += (3*global.moneyCollect);
+				timer += frameValue;
+			}
+			else if (timer == 0) && (global.autoUpgrade[1])
+			{
+				global.puddingSlaps += 4;
+				global.money += (4*global.moneyCollect);
+				timer += frameValue;
+			}
+			else if (timer == 0) && (global.autoUpgrade[2])
+			{
+				global.puddingSlaps += 5;
+				global.money += (5*global.moneyCollect);
+				timer += frameValue;
+			}
+			else if (timer == 0) && (global.autoUpgrade[3])
+			{
+				global.puddingSlaps += 5;
+				global.money += (5*global.moneyCollect);
+				timer += frameValue;
+			}
+			else if (timer == 0) && (global.autoUpgrade[4])
+			{
+				global.puddingSlaps += 10;
+				global.money += (10*global.moneyCollect);
+				timer += frameValue;
+			}
+			else if (timer == 0) && (global.autoUpgrade[5])
+			{
+				global.puddingSlaps += 20;
+				global.money += (20*global.moneyCollect);
+				timer += frameValue;
+			}
+}
